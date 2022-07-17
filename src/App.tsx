@@ -1,5 +1,6 @@
-import { Route, Routes } from "react-router";
+import { Navigate, Route, Routes } from "react-router";
 import HomePage from "./components/HomePage";
+import MenuItemCard from "./components/MenuItemCard";
 import NavBar from "./components/NavBar";
 
 function App() {
@@ -7,7 +8,9 @@ function App() {
     <>
       <NavBar />
       <Routes>
-        <Route path="/home" element={<HomePage />} />
+        <Route path="/" element={<Navigate to="/home" />} />
+        <Route path="home" element={<HomePage />} />
+        <Route path="item/:id/details" element={<MenuItemCard />} />
       </Routes>
     </>
   );

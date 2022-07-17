@@ -5,10 +5,14 @@ import { Link } from "react-router-dom";
 import Button from "@mui/material/Button";
 import Menu from "@mui/material/Menu";
 import MenuItem from "@mui/material/MenuItem";
+import { Cart_Selector } from "../Selectors";
 
 type NavBarProps = {};
 
 const NavBar: FC<NavBarProps> = (props) => {
+  const getData = Cart_Selector;
+  console.log(getData);
+
   const [anchorEl, setAnchorEl] = useState<null | HTMLElement>(null);
   const open = Boolean(anchorEl);
   const handleClick = (event: React.MouseEvent<HTMLButtonElement>) => {
