@@ -13,16 +13,14 @@ const MenuCard: FC<MenuCardProps> = ({ data }) => {
 
   const sendData = (d: any) => {
     dispatch(Add_item(d));
+    // console.log("onclick call hua");
   };
 
   return (
-    <Link
-      to={`${data.id}/details`}
-      className="p-4 rounded-md hover:shadow-md hover:border hover:border-gray-400"
-    >
-      <div>
+    <div className="p-4 rounded-md hover:shadow-md hover:border hover:border-gray-400">
+      <Link to={`item/${data.id}`}>
         <img className="w-64 h-64" src={data.imgdata} />
-      </div>
+      </Link>
       <div className="p-2">
         <div className="my-3">
           <h2 className="text-xl font-semibold text-black">{data.rname}</h2>
@@ -35,7 +33,7 @@ const MenuCard: FC<MenuCardProps> = ({ data }) => {
           Add to Cart
         </button>
       </div>
-    </Link>
+    </div>
   );
 };
 

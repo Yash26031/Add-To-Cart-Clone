@@ -1,3 +1,5 @@
+import { CardData } from "./modals/CardData";
+
 const Cardsdata = [
   {
     id: 1,

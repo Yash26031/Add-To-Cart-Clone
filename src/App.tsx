@@ -10,7 +10,7 @@ function App() {
       <Routes>
         <Route path="/" element={<Navigate to="/home" />} />
         <Route path="home" element={<HomePage />} />
-        <Route path="item/:id/details" element={<MenuItemCard />} />
+        <Route path="home/item/:id" element={<MenuItemCard />} />
       </Routes>
     </>
   );
